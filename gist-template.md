@@ -1,7 +1,6 @@
-# Title (replace with your title)
-<!-- What Am I supposed to do? How do I show these? 
-can I get a template in how to do it? Google did not help much  -->
-Introductory paragraph (replace this with your text)
+# Reg-ex Tutorial 
+Reg-ex
+
 
 ## Summary
 
@@ -37,7 +36,7 @@ Anchors cause for a match or fail depending on how the string is created.  These
 </ul>
 
 ### Quantifiers
-
+A quantifer specifies how many instances of the previous element must be present in the input string
 ### OR Operator
 
 ### Character Classes
@@ -45,7 +44,23 @@ Anchors cause for a match or fail depending on how the string is created.  These
 ### Flags
 
 ### Grouping and Capturing
-Grouping constructs 
+<ul>
+<li> <b>matched subexpressions </b> reg-ex pattern that use parentheses within the reg-ex <ol><li> <b> 1</b> Uses a backreference construct within the reg-ex using the syntax \num, where num is the ordinal number of the subexpression</li>
+<li> <b> 2 </b> The matched subexpression is backreferenced construct using the syntax \k < name > or \k < number > </li>
+<li> <b> 3 </b> </li>
+<li> <b>4  </b> </li></ol> </li>
+<li> <b> Named Matched Subexpression</b> A reg-ex pattern illustrates how numbered and named groups can be referenced. The syntax is as follows (? < name >subexpression) or (? 'name' subexpression) </li>
+<li> <b> Balancing Group Defintions</b> A balanceing group definition deletes the previous defined group.  Syntax as follows (?< name1-name2 >subexpression)
+or:
+(?'name1-name2' subexpression) </li>
+<li> <b>Noncapturing Groups </b> The group construct does not capture the substring that is matched by a subexpression (?:subexpression)  </li>
+<li> <b> Group Options</b></li>
+<li> <b> Zero-width positive lookahead assertions</b></li>
+<li> <b> Zero-width negative lookahead assertions </b></li>
+<li> <b> Zero-width positive lookbehind assertions </b></li>
+<li> <b> Zero width negative lookbehind assertions</b></li>
+Atomic Groups 
+</ul>
 
 ### Bracket Expressions
 
@@ -54,9 +69,14 @@ Grouping constructs
 ### Boundaries
 
 ### Back-references
-
+A backreference allows a previous matched subexpression to be identified later in the same expression. 
 ### Look-ahead and Look-behind
 
 ## Author
 
 A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+
+## Citations 
+Resreached used in this assignment was. 
+
+https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference#quantifiers

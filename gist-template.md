@@ -24,6 +24,17 @@ Briefly summarize the regex you will be describing and what you will explain. In
 ## Regex Components
 
 ### Anchors
+Anchors cause for a match or fail depending on how the string is created.  These anchors are  ^ $ /A \Z \z \G \b \B 
+<ul> 
+<li> <b> ^ </b>Must start at the beging of the string </li>
+<li> <b> $ </b> This match must occur at end of string or before a new line (\n)</li>
+<li> <b>\A </b> This match must pass at the begining of the string </li>
+<li> <b>\Z </b>this match must pass at the end of the string or before the end of the line /n</li>
+<li>  <b> \z</b> This match happens at the end of the string </li>
+<li> <b> \G </b> This match has to occur at the point where the previous match ended </li>
+<li> <b> \b </b> This match happens at a boundary between an alphanumeric or nonalphanumeric </li>
+<li> <b> \B </b> The match happens at the \b boundary</li>
+</ul>
 
 ### Quantifiers
 
@@ -34,6 +45,7 @@ Briefly summarize the regex you will be describing and what you will explain. In
 ### Flags
 
 ### Grouping and Capturing
+Grouping constructs 
 
 ### Bracket Expressions
 

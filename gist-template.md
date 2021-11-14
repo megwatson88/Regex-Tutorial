@@ -2,9 +2,11 @@
 Reg-ex
 
 
+
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+Regex is a string of text. The Regex matches fragments.  
+
 
 ## Table of Contents
 
@@ -38,9 +40,9 @@ Anchors cause for a match or fail depending on how the string is created.  These
 ### Quantifiers
 A quantifer specifies how many instances of the previous element must be present in the input string
 ### OR Operator
-
+The OR operator is a grouping expression.  The syntax is as follows (this|that)
 ### Character Classes
-
+A character class defines a set of characters. 
 ### Flags
 
 ### Grouping and Capturing
@@ -63,15 +65,17 @@ Atomic Groups
 </ul>
 
 ### Bracket Expressions
+Square brackets match what is within the string ie [D] will find the `D` within the string. 
 
 ### Greedy and Lazy Match
 
 ### Boundaries
-
+match postitions by using the \b 
 ### Back-references
 A backreference allows a previous matched subexpression to be identified later in the same expression. 
 ### Look-ahead and Look-behind
-
+Look-ahead asserts that what follows the current postions. /n 
+llok-behind asserts that what precedes the current position. 
 ## Author
 
 A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
@@ -80,3 +84,7 @@ A short section about the author with a link to the author's GitHub profile (rep
 Resreached used in this assignment was. 
 
 https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference#quantifiers
+
+http://www.rexegg.com/regex-boundaries.html#anchors
+
+https://webagility.com/posts/the-basics-of-regex-explained

@@ -1,12 +1,9 @@
-# Reg-ex Tutorial 
-Reg-ex
+# Title (replace with your title)
 
-
+A regular expression is a way to describe patterns in string data.
 
 ## Summary
-
-Regex is a string of text. The Regex matches fragments.  
-
+In this tutorial we will be going over how to find matches in strings. We will be working to find the ending of "-ious"
 
 ## Table of Contents
 
@@ -23,68 +20,57 @@ Regex is a string of text. The Regex matches fragments.
 - [Look-ahead and Look-behind](#look-ahead-and-look-behind)
 
 ## Regex Components
+to begin we will need to sequence the set of character we are looking for by using the following bounds /ious/
+
+let string = "Lorem ipsum dolor sit amet, in mei explicari scripserit, no iudicabit appellantur vis. Mandamus posidonium has ea, pro te prima quodsi patrioque, nominavi dissentias vel ei. In has sint reque, tamquam ponderum his et. Per viris elitr verear ut. No sint bonorum delenit per, eam ut vivendum definiebas, cu moderatius theophrastus mel. Ut mel causae habemus prodesset. Id fugit tritani ponderum per, pri tota denique corpora ei.
+
+In munere expetenda vituperatoribus eam, wisi rebum pro et. Vix ei lorem solet ubique. Mel dico harum tamquam at, vis eu oratio audire. Meis veniam volutpat ei eum, purto populo iracundia ex est. Mei an libris torquatos conclusionemque.
+
+Ea civibus dignissim liberavisse has, nec honestatis scripserit delicatissimi te. No audiam impetus vim. Pro ut nisl scriptorem, ne qui graeci oportere, eum erat omnesque salutandi at. Persius senserit incorrupte vis id.
+
+Nemore oblique inimicus at mel. Pro commodo qualisque et, eum dicat utinam id. Id nam nonumes reprehendunt, eum accusata salutatus te. Clita tritani patrioque sed no, ei agam nostrud nominavi sea. Omnes homero definiebas vim at, pri utinam veritus maluisset an. Id ornatus posidonium qui, nam no rebum liber consectetuer, ex vero ferri disputando ius. Nam quando alterum eligendi ad, ex integre malorum qui.
+
+Fabellas vivendum sea id, id nibh facer possim pro. Id vel quas deleniti qualisque. Sed odio homero et, minim definitiones eu nec, per epicurei theophrastus ei. Nec scaevola corrumpit voluptatum eu, eu eum paulo dolore.
+
+Ad lorem sententiae nam, eum wisi tacimates at, ad duo porro affert. Alterum labores mea cu. Per erat sadipscing ut. Mei ei eligendi qualisque philosophia, est ut congue postea recusabo. In ius nullam facilis comprehensam.
+
+Eripuit ornatus persecuti eum id, solet iudico ea vel, an nec ancillae vituperata. Has in quem nisl detracto, quis torquatos eos te, paulo imperdiet iracundia has eu. Per postulant consetetur adipiscing at, dicam pertinax est ex, ea dolorem eligendi efficiendi pro. Delenit tibique id sit, sumo latine interpretaris usu cu. No idque iisque commune per, eam at liberavisse conclusionemque.
+
+His fugit omnes omittam ne, sea cu alia laudem. Ut qui fierent placerat, duo albucius inimicus electram in. Tale splendide vix ex. Te incorrupte omittantur mel, eu nam purto cotidieque disputationi, in feugait detracto efficiantur sea. Dicat sensibus reprimique ex nam. Has illum deseruisse at, alii invidunt splendide ei vis.
+
+At soleat suscipit sed. Elitr accommodare per ei, autem assum facilis nec ut, ei mandamus efficiantur eum. Constituam contentiones nam ex. Sumo meis qualisque pro cu, quo id ancillae vulputate, legimus utroque nominati ut vel.
+
+No erant tollit mucius vel, ea sed feugait constituam. Case adversarium usu at, ea autem incorrupte cotidieque quo. Sapientem constituto mea et, usu in mundi ridens omittantur, ex modo quas nam. Quas reque no eum. Has cu nullam percipit, eam nullam dicunt te. Ne sumo maiorum ponderum pro, case eros ornatus vis id." 
+
+function verify(regexp, /ious*/) {
+    if(regexp.source == "...") return;
+    for(let /ious/ of yes) if (!regexp.test(str)){
+        console.log("Failed to match '" + str + "' with " + regexp);
+    }
+}
 
 ### Anchors
-Anchors cause for a match or fail depending on how the string is created.  These anchors are  ^ $ /A \Z \z \G \b \B 
-<ul> 
-<li> <b> ^ </b>Must start at the beging of the string </li>
-<li> <b> $ </b> This match must occur at end of string or before a new line (\n)</li>
-<li> <b>\A </b> This match must pass at the begining of the string </li>
-<li> <b>\Z </b>this match must pass at the end of the string or before the end of the line /n</li>
-<li>  <b> \z</b> This match happens at the end of the string </li>
-<li> <b> \G </b> This match has to occur at the point where the previous match ended </li>
-<li> <b> \b </b> This match happens at a boundary between an alphanumeric or nonalphanumeric </li>
-<li> <b> \B </b> The match happens at the \b boundary</li>
-</ul>
-
+There are no ancors used in this regex.
 ### Quantifiers
-A quantifer specifies how many instances of the previous element must be present in the input string
+We are using the quantifier * to find the ending of the word "ious"
 ### OR Operator
-The OR operator is a grouping expression.  The syntax is as follows (this|that)
+We use the OR operator to find the ending of the word "ious" or "ious"
 ### Character Classes
-A character class defines a set of characters. 
+
 ### Flags
 
 ### Grouping and Capturing
-<ul>
-<li> <b>matched subexpressions </b> reg-ex pattern that use parentheses within the reg-ex <ol><li> <b> 1</b> Uses a backreference construct within the reg-ex using the syntax \num, where num is the ordinal number of the subexpression</li>
-<li> <b> 2 </b> The matched subexpression is backreferenced construct using the syntax \k < name > or \k < number > </li>
-<li> <b> 3 </b> </li>
-<li> <b>4  </b> </li></ol> </li>
-<li> <b> Named Matched Subexpression</b> A reg-ex pattern illustrates how numbered and named groups can be referenced. The syntax is as follows (? < name >subexpression) or (? 'name' subexpression) </li>
-<li> <b> Balancing Group Defintions</b> A balanceing group definition deletes the previous defined group.  Syntax as follows (?< name1-name2 >subexpression)
-or:
-(?'name1-name2' subexpression) </li>
-<li> <b>Noncapturing Groups </b> The group construct does not capture the substring that is matched by a subexpression (?:subexpression)  </li>
-<li> <b> Group Options</b></li>
-<li> <b> Zero-width positive lookahead assertions</b></li>
-<li> <b> Zero-width negative lookahead assertions </b></li>
-<li> <b> Zero-width positive lookbehind assertions </b></li>
-<li> <b> Zero width negative lookbehind assertions</b></li>
-Atomic Groups 
-</ul>
 
 ### Bracket Expressions
-Square brackets match what is within the string ie [D] will find the `D` within the string. 
 
 ### Greedy and Lazy Match
 
 ### Boundaries
-match postitions by using the \b 
+
 ### Back-references
-A backreference allows a previous matched subexpression to be identified later in the same expression. 
+
 ### Look-ahead and Look-behind
-Look-ahead asserts that what follows the current postions. /n 
-llok-behind asserts that what precedes the current position. 
+
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
-
-## Citations 
-Resreached used in this assignment was. 
-
-https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference#quantifiers
-
-http://www.rexegg.com/regex-boundaries.html#anchors
-
-https://webagility.com/posts/the-basics-of-regex-explained
+Check out my github to get to know my projects. <a href="https://github.com/megwatson88"> Github </a>

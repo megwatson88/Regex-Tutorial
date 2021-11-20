@@ -56,21 +56,21 @@ We are using the quantifier * to find the ending of the word "ious"
 ### OR Operator
 We use the OR operator to find the ending of the word "ious" or "ious"
 ### Character Classes
-
+We are usign the character class [ious] to find the ending of the word "ious"
 ### Flags
-
+We are using the flag g to find the ending of the word "ious"
 ### Grouping and Capturing
-
+To capture the word "ious" we are using the group (\bious\b)
 ### Bracket Expressions
-
+Since we are not trying to replae we will not use the brakect expression. 
 ### Greedy and Lazy Match
-
+We are not greedy matching with this regex becuase we are not using the quantifier *, +, ?, {}, *?, or ??
 ### Boundaries
-
+The boundies we use are the beginning and end of the string. with //
 ### Back-references
-
+This regex is not using back references.
 ### Look-ahead and Look-behind
-
+The look ahead and look behind are not used in this regex.
 ## Author
 
 Check out my github to get to know my projects. <a href="https://github.com/megwatson88"> Github </a>
